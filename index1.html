@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自我介绍</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: rgba(107, 182, 226, 0.5);
+    display: flex;
+    justify-content: space-around;
+    padding: 28px 0;
+  }
+  .navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background-color: rgba(155, 191, 218, 0.5);
+    color: black;
+    padding: 12px 28px;
+  }
+  .content {
+    display: none;
+    position: relative;
+    padding: 16px;
+    border: 5px solid rgba(173, 216, 230, 0.5);
+    margin: 10px;
+  }
+  .active-content {
+    display: block;
+  }
+  .image-text-container {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+}
+.profile-image {
+  width: 200px; /* 保持图片宽度不变 */
+  height: auto;
+  margin-right: 20px; /* 图片和文本之间的间隔 */
+}
+.profile-text {
+  flex: 1; /* 让文本区域可以伸缩，填充剩余空间 */
+}
+
+  /* 导航栏 */
+  #home img {
+    width: 200px; 
+    height: auto;
+  }
+  /* 音乐专辑图片宽度 */
+  .album-image {
+    width: 500px; 
+    height: 440px;
+    margin: 10px;
+  }
+   /* 旅游图片宽度 */
+  #travel img {
+    width: 376px; 
+    height: auto;
+    margin: 10px;
+  }
+  /* 学校图片宽度 */
+  #school img {
+    width: 900px; 
+    height: 500px;
+    margin: 10px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* 更改鼠标样式 */
+  .album-image {
+    cursor: pointer; 
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">首页</a>
+  <a href="#music">我喜欢的音乐</a>
+  <a href="#travel">旅游</a>
+  <a href="#school">我的学校</a>
+</div>
+
+<div id="home" class="content active-content">
+  <h2>自我介绍</h2>
+  <div class="image-text-container">
+    <img src="zwjs.png" alt="我的照片" class="profile-image">
+    <div class="profile-text">
+      <p>这里是自我介绍的内容...</p>
+      <p>我是一名来自陕西咸阳的男生，我叫史明佳，今年21岁，就读于西安航空学院计算机学院计算机系计算机科学与技术专业。</p>
+      <p>在这片承载着秦汉风骨的土地上，我汲取着历史的智慧，滋养着文化的底蕴。咸阳的每一缕晨曦，每一抹晚霞，都映照着我成长的足迹，也孕育了我多样的爱好。</p>
+      <p>我喜爱音乐，尤其是赵雷的歌声，那带着沧桑与温度的旋律总能触动我的心弦。在《成都》的街头走一走，或是跟随《理想》的脚步，我总能从中找到生活的力量和前行的勇气。音乐于我，不仅是休闲时的享受，更是心灵深处的一种寄托。</p>
+      <p>除了音乐，我还酷爱旅游。行走在不同的城市，感受各异的风土人情，是我生活中不可或缺的乐趣。每一次的旅行都是一次心灵的洗礼，每一次的探索都是对世界的一次深刻理解。我向往雪山的高洁，也迷恋大海的广阔，旅游让我深知，世界之大，无奇不有，而每一次出发，都是为了更好地归来。</p>
+    </div>
+  </div>
+</div>
+
+<div id="music" class="content">
+  <h2>我喜欢的音乐</h2>
+  <p>我喜欢听音乐，尤其是赵雷的歌曲。</p>
+  <p>赵雷的音乐，如同春日里的一缕暖阳，温暖而明媚，照亮了心灵的每一个角落。他的歌声，带着时光的印记，穿过岁月的长河，轻轻拂过耳畔，
+    唤醒了沉睡已久的情感。</p>
+  <p>那首<a href="index2/index.html">《成都》</a>，仿佛将我们带到了玉林路的尽头，看着小酒馆的门口，感受着分别的忧愁与重逢的喜悦。而《南方姑娘》，则让我们想起了那温
+    婉如水的女子，眼中闪烁着对美好生活的向往。</p>
+  <p>赵雷的音乐，是旅途中最好的陪伴，让我们在陌生的城市里，不再孤单。每一次聆听，都是一次心灵的洗礼，让我们在纷繁世界中，找到一片宁
+    静的港湾。</p>
+<audio id="audioPlayer" style="display:none;"></audio>
+<img class="album-image" src="zl1.png" alt="赵雷专辑1" onclick="toggleMusic(this,'gulou.mp3')">
+<img class="album-image" src="zl2.png" alt="赵雷专辑2" onclick="toggleMusic(this,'duo.mp3')">
+<img class="album-image" src="zl3.png" alt="赵雷专辑3" onclick="toggleMusic(this,'CAY.mp3')">
+<p align="right">单击图片欣赏音乐(再次点击暂停播放).....</p>
+</div>
+</div>
+
+<div id="travel" class="content">
+  <h2>旅游</h2>
+  <p>旅游，作为一种独特的生活体验，它不仅是一次简单的出行，更是一场心灵的远行。当我们踏上旅途，就意味着我们开始了一段寻找自我、放松身心、增长见识的旅程。</p>
+  <p>在这段旅程中，我们可以穿梭于名山大川之间，感受大自然的神奇魅力，那山峦叠翠、碧水蓝天的美景，无不让人心旷神怡，流连忘返。我们也可以漫步在古老的小巷，
+    品味历史的沉淀，那斑驳的城墙、沧桑的遗迹，仿佛在诉说着千年的故事，让人感慨万千。</p>
+  <p>在旅途中，我们不仅会遇到美丽的风景，还会遇到形形色色的人。与他们交流，了解他们的生活习俗和风土人情，让我们懂得尊重与包容，学会从不同的角度看待世界。
+    此外，旅行中的种种挑战和未知，也锻炼了我们的独立能力和应变能力，让我们在不断的尝试和探索中成长。</p>
+  <p>旅行让我们暂时脱离了熟悉的环境，让我们有机会重新审视自己，思考生活的真谛。在这个过程中，我们学会了珍惜当下，懂得了生活的美好。每一次旅行归来，我们都
+    会带着满满的收获，以更加积极的心态面对生活，让人生因此变得更加丰富多彩。总之，旅游是一场永无止境的探索，它让我们在不断的行走中发现美好，感悟人生。</p>
+  <p>这里是我旅游的照片...</p>
+  <img src="ly1.png" alt="旅游照片">
+  <img src="ly2.png" alt="旅游照片">
+  <img src="ly3.png" alt="旅游照片">
+  <img src="ly4.png" alt="旅游照片">
+</div>
+
+<div id="school" class="content">
+  <h2>我的学校</h2>
+  <p>这里是我的学校简介...</p>
+  <p>西安航空学院,简称西航，位于陕西省西安市，由陕西省人民政府举办的全日制普通高等学校，为独立设置的非营利性事业单位。</p>
+  <p>学校以工科为主、是多学科协调发展的全日制普通高等学校。是西北地区唯一开展飞行技术专业招生培养的本科高校。学校创建于1955年，原名为西安航空工业学校，
+    隶属原航空工业部2012年经教育部批准升格为普通本科院校，更名为西安航空学院。学校是西北地区唯一开展飞行技术专业招生培养的本科高校，是“十四五”时期教育
+    强国推进工程储备院校。现为全国新建本科院校联盟副理事长单位、中国产学研合作促进会常务理事单位、中国校企协同产学研创新联盟理事单位。</p>
+  <img src="wdxx.png" alt="学校照片" style="display: block; margin: 0 auto;">
+</div>
+
+<script>
+document.querySelectorAll('.navbar a').forEach(item => {
+  item.onclick = function() {
+    document.querySelectorAll('.content').forEach(content => {
+      content.classList.remove('active-content');
+    });
+    document.querySelector(this.getAttribute('href')).classList.add('active-content');
+    return false;
+  }
+});
+</script>
+<!--音乐播放器-->
+<script>
+  var currentSong = null; 
+  var audioPlayer = document.getElementById('audioPlayer');
+  function toggleMusic(image, song) {
+    if (currentSong === song) {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+      currentSong = null;
+    } else {
+      audioPlayer.src = song;
+      audioPlayer.play();
+      currentSong = song;
+    }
+  }
+  function playTravelMusic(song) {
+    if (currentSong) {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+    }
+    audioPlayer.src = song;
+    audioPlayer.play();
+    currentSong = song;
+  }
+  //旅游页面音乐播放
+  document.querySelector('a[href="#travel"]').addEventListener('click', function() {
+    playTravelMusic('cjdn.mp3'); 
+  });
+  document.querySelectorAll('.navbar a').forEach(function(item) {
+    if (item.getAttribute('href') !== '#travel') {
+      item.addEventListener('click', function() {
+        if (currentSong === 'cjdn.mp3') {
+          audioPlayer.pause();
+          audioPlayer.currentTime = 0;
+          currentSong = null;
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

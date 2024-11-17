@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都 - 赵雷</title>
+  <style>
+    body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      background-color: #c9eaa0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .content {
+      display: block;
+      position: relative;
+      padding: 40px;
+      background-color: #c1e769;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-text {
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .video-container {
+      margin: 20px auto;
+      max-width: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #myVideo {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="content active-content">
+    <h2>成都</h2>
+    <div class="profile-text">
+      <p>《成都》，赵雷的经典之作，以其深情的旋律和质朴的歌词，捕捉了无数听众的心。这首歌曲仿佛一幅流动的画卷，描绘了
+        成都这座城市的独特韵味和生活气息。在赵雷的歌声中，我们仿佛漫步在玉林路的街头，感受着小酒馆的温暖，体会着分别时
+        的忧愁与重逢时的喜悦。《成都》不仅是一首关于城市的歌，更是一首关于记忆与情感的诗，它让我们在音乐中找到了共鸣，
+        感受到了家的温暖和远方的呼唤。</p>
+      <div class="video-container">
+        <video id="myVideo" controls>
+          <source src="chengdu.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <script>
+    function playVideo() {
+      var video = document.getElementById("myVideo");
+      video.play();
+    }
+    function pauseVideo() {
+      var video = document.getElementById("myVideo");
+      video.pause();
+    }
+  </script>
+</body>
+</html>
